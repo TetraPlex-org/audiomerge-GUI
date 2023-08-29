@@ -49,11 +49,7 @@ class Root_window(Screen):
     # initializing Screen class with super() method
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-
-        # adding title and icon
-        self.title =  "AudioMerge"
-        self.icon = "icon.png"
-
+        
         # creating a box layout(child widgets on top of main root window)
         self.layout = BoxLayout(orientation='vertical')
         self.label = Label(text="Press 'Record' to start recording")
@@ -149,7 +145,7 @@ class Root_window(Screen):
         else:
              raise ValueError("no audio data available to write")
      
-class AudioRecorderApp(App):
+class AudiomergeApp(App):
     ''' this class inherits App class of Kivy,"build" method creates and returns an 
         instance of the ScreenManager that manages different screens (welcome and root_window)'''
     
@@ -163,5 +159,5 @@ class AudioRecorderApp(App):
         return sm
 
 if __name__ == '__main__':
-    AudioRecorderApp().run()
+    AudiomergeApp().run()
      
