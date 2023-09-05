@@ -82,6 +82,7 @@ class AndroidPermissions:
 
 from jnius import autoclass
 # imporing Android API's using pyjnius's autoclass method
+# docs: https://developer.android.com/reference/android/media/MediaRecorder
 MediaRecorder = autoclass('android.media.MediaRecorder')
 AudioSource = autoclass('android.media.MediaRecorder$AudioSource')
 OutputFormat = autoclass('android.media.MediaRecorder$OutputFormat')
