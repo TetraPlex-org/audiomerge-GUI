@@ -7,7 +7,7 @@ title = Audiomerge
 package.name = audiomerge
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = com.tetraplex.audiomerge
+package.domain = org.test
 
 # (str) Source code where the main.py live
 source.dir = .
@@ -37,7 +37,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,pyjnius
+requirements = python3,kivy
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -60,8 +60,7 @@ orientation = portrait
 # OSX Specific
 #
 
-#
-author = © Tetraplex 2023
+#author = ©
 
 # change the major version of python used by the app
 osx.python_version = 3
@@ -101,7 +100,7 @@ android.permissions = RECORD_AUDIO,READ_EXTERNAL_STORAGE
 #android.features = android.hardware.usb.host
 
 # (int) Target Android API, should be as high as possible.
-android.api = 31
+android.api = 33
 
 # (int) Minimum API your APK / AAB will support.
 #android.minapi = 21
@@ -283,7 +282,7 @@ android.api = 31
 
 # (list) The Android archs to build for, choices: armeabi-v7a, arm64-v8a, x86, x86_64
 # In past, was `android.arch` as we weren't supporting builds for multiple archs at the same time.
-android.archs = arm64-v8a, armeabi-v7a
+android.archs = arm64-v8a
 
 # (int) overrides automatic versionCode computation (used in build.gradle)
 # this is not the same as app version and should only be edited if you know what you're doing
