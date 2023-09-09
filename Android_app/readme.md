@@ -1,5 +1,35 @@
 # workflow 
 
+```mermaid
+---
+title: Build Workflow
+---
+flowchart TB
+    START((Start))
+    code[/source code/]
+    packager[[packaging App]]
+    spec[/buildozer.spec/]
+    bin[/bin/app/]
+    install[/installing app on phone & plugging phone to PC\]
+    debug[[debugging error]]
+    error{error}
+    logs>checking logs]
+    END((ready))
+    
+
+    START-->code
+    debug --> START
+    packager-->bin
+    bin-->install
+    code-->packager
+    spec-->packager
+    install --> logs
+    logs --> error
+    error --> |yes| debug
+    error --> |no| END
+
+```
+
 ![app_build_flow drawio](https://github.com/TetraPlex-org/audiomerge-GUI/assets/72141859/7051024c-fa54-4772-a33d-8b7d20b6104c)
 
 ## Building APP
